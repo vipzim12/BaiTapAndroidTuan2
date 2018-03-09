@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
+        if(resultCode==3){
+            int imageId= data.getIntExtra("Key_ChooseImage", -1);
+            Log.d("Test: ", ""+imageId);
+        }
         if (requestCode == REQUEST_ACT_CHANGE_BACKGROUND) {
             if (resultCode == RESULT_OK) {
 
